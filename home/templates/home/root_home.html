@@ -1,0 +1,43 @@
+ {% extends "root.html" %}
+  {% block nav %}
+  <nav class="navbar  navbar-dark navbar navbar-expand-sm">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon "><a class="navbar-brand " href="#"></a></span></button>
+			 <div class="collapse navbar-collapse navbar-expand-sm pb-1" id="navbarSupportedContent">	
+				<ul class="nav  ">
+					<li class="nav-item">
+						<a class="navbar-brand " href="#"><img src="assets/images/burger-icone.png" width="30" height="30"></a>
+					</li>
+					 <li class="nav-item">
+						<a class="nav-link " href="restaurant.html">Restaurant Story</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="menu.html">Menu</a>
+					</li>
+					 <li class="nav-item">
+						<a class="nav-link" href="pictures.html">Pictures</a>
+					</li>
+
+					 <li class="nav-item">
+						<a class="nav-link" href="contact.html">Contact</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active disabled" href="index.html">Home</a>
+					</li>
+					
+				</ul>
+			</div>
+			</nav>
+			<div class="jumbotron jumbotron-fluid change">
+				<div class="container">
+					<div class="row">
+					<div class="col-md-3"><img src="assets/images/burger-icone.png" width="100px" height="100px"></div>
+					<div class="col-md-6"><h1> Welcome in BurgerCity</h1>
+					<p>This is the place with the most choice of burger in the world !</p></div>
+					<div class="col-md-3"><img src="assets/images/burger-icone.png" width="100px" height="100px"></div>
+					</div>
+			</div>
+		</div>
+	</header>
+	{% block content %}{% endblock %}
+	{% endblock %}	

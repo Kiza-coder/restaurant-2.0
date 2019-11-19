@@ -37,6 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'home',
+    'menu',
+    'gallery',
+    'contact',
+    'delivery',
+    'story',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +60,9 @@ ROOT_URLCONF = 'restaurant_python.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+                 os.path.join(BASE_DIR,'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
