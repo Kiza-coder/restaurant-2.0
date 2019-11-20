@@ -5,26 +5,21 @@
 				<span class="navbar-toggler-icon "><a class="navbar-brand " href="#"></a></span></button>
 			 <div class="collapse navbar-collapse navbar-expand-sm pb-1" id="navbarSupportedContent">	
 				<ul class="nav  ">
-					<li class="nav-item">
-						<a class="navbar-brand " href="#"><img src="assets/images/burger-icone.png" width="30" height="30"></a>
-					</li>
 					 <li class="nav-item">
-						<a class="nav-link " href="restaurant.html">Restaurant Story</a>
+						<a class="nav-link "  href='{% url "story" %}'>Story</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link " href="menu.html">Menu</a>
+						<a class="nav-link " href='{% url "menu" %}'>Menu</a>
 					</li>
 					 <li class="nav-item">
-						<a class="nav-link" href="pictures.html">Pictures</a>
+						<a class="nav-link"  href='{% url "gallery" %}'>Gallery</a>
 					</li>
-
 					 <li class="nav-item">
-						<a class="nav-link" href="contact.html">Contact</a>
+						<a class="nav-link"  href='{% url "contact" %}'>Contact</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link active disabled" href="index.html">Home</a>
+					 <li class="nav-item">
+						<a class="nav-link"  href='{% url "delivery" %}'>Delivery</a>
 					</li>
-					
 				</ul>
 			</div>
 			</nav>
