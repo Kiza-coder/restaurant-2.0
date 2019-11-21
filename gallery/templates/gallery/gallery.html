@@ -1,5 +1,53 @@
 {% extends "gallery/root_gallery.html" %}
 {% block title %}Gallery{% endblock %}
 {% block content %}
-   <h1>CONTENT GALLERY!!!!</h1>
+{% load static %}
+
+   	
+
+   <div class="container">
+  <h2>Some pictures </h2>  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner ">
+	{% for images in images_list %}
+	{% if images.0.order == 1 %}
+      <div class="carousel-item active">
+
+    {% else %}
+      		<div class="carousel-item">
+    {% endif %}
+          	<div class="row  ">
+      		<div class="col-md-6 col-12 d-flex justify-content-center">
+        	<img src="{% static '' %}gallery/{{ images.0.url }}" class="img-fit img-responsive" ></div>
+			<div class="col-md-6 col-12 d-flex justify-content-center">
+        	<img src="{% static '' %}gallery/{{ images.1.url }}"  class="img-fit img-responsive" ></div>
+        	<div class="col-12 invisible ">*</div>
+			<div class="col-md-12 d-flex justify-content-center">
+        	<img class="align-self-end img-fit img-responsive" src="{% static '' %}gallery/{{ images.2.url }}" ></div>
+        </div>
+    </div>
+    {% endfor %}
+
+     
+    
+    
+      
+</div>
+    
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+</div>
+
 {% endblock %}

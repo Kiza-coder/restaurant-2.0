@@ -1,0 +1,39 @@
+body {
+  background: #E3D7C5;
+}
+
+.background-basic {
+  background: #E3D7C5;
+}
+
+.jumbo {
+  background: #FF6647;
+  color: #FAF2DE;
+}
+
+.nav-link {
+  color: black;
+}
+
+.cardHome {
+  background: #FF6647;
+  color: white;
+  height: 300px;
+}
+
+.cardFooter {
+  background: #FF6647;
+  color: white;
+  border: none;
+}
+
+.img-fit {
+  width: 400px;
+  height: 250px;
+}
+
+.cardForm {
+  background: #E3D7C5;
+}
+
+/*# sourceMappingURL=styles.css.map */

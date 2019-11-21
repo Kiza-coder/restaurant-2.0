@@ -1,5 +1,66 @@
 {% extends "contact/root_contact.html" %}
 {% block title %}Contact{% endblock %}
 {% block content %}
-   <h1>CONTENT CONTACT!!!!</h1>
+ 	
+<div class="container">
+		<div class="row ml-1">
+			<div class="col-12 col-md-12 ">If you want ton contact us for job opportunities , reservation or other question you can do it in the form below</div>
+		
+			<div class="col-12 col-md-12 pt-4">
+				<div class="row">
+					<div class="col-md-7 ">
+						<h3>Contact</h3>
+						<form class="form-row" action="{% url 'contact' %}" method='post'>
+							 {% csrf_token %}
+							<div class="row pb-2">
+							<div class="col-md-5 col-12">
+								{{ form.name.errors }}
+								<label  for="{{ form.name.id_for_label }}">Name :</label>
+							    {{ form.name }}
+							</div>
+							<div class="col-md-5 col-12 ml-auto ">
+								{{ form.firstname.errors }}
+								<label  for="{{ form.firstname.id_for_label }}">Firstname :</label>
+							    {{ form.firstname }}
+							</div>
+						</div>
+						<div class="col-md-5 col-12 mr-auto offset">
+								{{ form.gender.errors }}
+								<label  for="{{ form.gender.id_for_label }}">Gender :</label>
+							    {{ form.gender }}
+							</div>
+							<div class="col-md-5 col-12 ">
+								{{ form.email.errors }}
+								<label  for="{{ form.firstname.id_for_label }}">Email :</label>
+							    {{ form.email }}
+							</div>
+							
+						
+							<div class="col-md-12">
+								{{ form.message.errors }}
+								<label  for="{{ form.message.id_for_label }}">Message :</label>
+							</div>
+							<div class="col-md-12">
+
+							    {{ form.message }}
+							</div>
+							
+							
+							<div class="col-md-3 col-12 pt-2">
+								<input type="submit" value="Submit" >
+							</div>
+							<div class="col-md-6 pt-3">
+								{% if envoi %}
+								Votre message a bien été envoyé !
+								{% endif %} 	
+							</div>	
+						</form>	
+						
+					</div>
+					
+					<div class="col-md col-12 pt-5 "><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.032319513926!2d4.331440150786744!3d50.83056526768374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c46b072ef187%3A0x99ccdbcdb1ed61!2sRue%20de%20M%C3%A9rode!5e0!3m2!1sfr!2sbe!4v1568123081391!5m2!1sfr!2sbe" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe></div>
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}
