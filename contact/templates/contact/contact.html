@@ -4,12 +4,16 @@
  	
 <div class="container">
 		<div class="row ml-1">
+
 			<div class="col-12 col-md-12 ">If you want ton contact us for job opportunities , reservation or other question you can do it in the form below</div>
-		
+			
 			<div class="col-12 col-md-12 pt-4">
 				<div class="row">
 					<div class="col-md-7 ">
 						<h3>Contact</h3>
+						
+						
+
 						<form class="form-row" action="{% url 'contact' %}" method='post'>
 							 {% csrf_token %}
 							<div class="row pb-2">

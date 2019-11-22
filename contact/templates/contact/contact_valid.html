@@ -1,0 +1,18 @@
+{% extends "contact/root_contact.html" %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4 d-flex flex-column">
+			<p>Thanks for your message .</p>
+			<p>
+			Your message will be analyze as soon as possible.  
+			</p>
+			<a href="{% url 'contact' %}" class='btn btn-secondary'>Go back to Contact page
+			</a> 	
+		</div>
+	</div>
+</div>
+
+{% endblock %}

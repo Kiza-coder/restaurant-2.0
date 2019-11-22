@@ -1,39 +1,44 @@
 {% extends "menu/root_menu.html" %}
 {% block content %}
-   <h1 class="text-center">Menu</h1>
-   <div class="container-fluid">
-   	<div class="row">
-   		<div class="col-md-12 card offset-1">
-   			<div class="row background-basic justify-content-space-between">
-   				<div class="col-md-5">
-   					<div class="card">
-   						<div class="card-header">
-   							<div class="text-center">Burger</div>
-   							</div>
-   						<div class="card-body">
-   							<ul class="list-group">
-   								<li class="list-group-item d-flex justify-content-between align-items-center">
-   									burger
-   								<span class="badge badge-primary badge-pill">
-   									12
-   								</span>
-   								</li>	
-   							</ul>
-   						</div>
-   					</div>
-   				</div>
-   				<div class="col-md-5 ">
-   					<div class="card">
-   						<div class="card-header">
-   							
-   							</div>
-   						<div class="card-body">
-   						
-   						</div>
-   					</div>
-   				</div>
-   			</div>
-   		</div>
-   	</div>
+{% load static %}
+
+
+<div class="container-fluid">
+   <div class="row">
+      <div class="col-md-12">
+         <div class="card">
+          <div class="card-header text-center">
+             Menu
+          </div>
+          <div class="row">
+          <div class="card-body">
+             <div class="col-md-12 d-flex flex-column">
+            <div class="card text-center">
+               <div class="card-header">
+                  Burger
+               </div>
+                <div><a href="{% url 'menu_burger' %}"><img src="{% static 'menu/burger_menu.png' %}" class="img-fit img-responsive" ></div>
+             </div>
+             <div class="card mt-4 text-center">
+               <div class="card-header">
+                  Dessert
+               </div>
+                <div><img src="{% static 'menu/desert_menu.png' %}" class="img-fit img-responsive" ></div>
+                
+             </div>
+             <div class="card mt-4 text-center  ">
+               <div class="card-header">
+                  Drink
+               </div>
+                <div><img src="{% static 'menu/drink_menu.jpeg' %}" class="img-fit img-responsive" ></div>
+                
+             </div>
+             </div>
+          </div>
+       </div>
+         </div>
+      </div>
    </div>
+</div>
+   
 {% endblock %}
